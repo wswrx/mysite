@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=10">
+		<title>配电机柜</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="dist/css/ionicons.min.css">
+		<link rel="stylesheet" href="dist/css/AdminLTE.css">
+		<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+		<link rel="stylesheet" href="vince/css/vince.css">
+		<link rel="stylesheet" href="vince/biao/css/font-awesome.min.css">
+		<script src="vince/js/echarts.js"></script>
+		<!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.min.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+	</head>
+
+	<body class="hold-transition skin-blue sidebar-mini">
+		<div class="wrapper">	
+			<header class="main-header">
+					<a href="#" class="logo">
+						<span class="logo-mini">
+					<img src="vince/images/v01.png">
+					</span>
+						<span class="logo-lg"><img src="vince/images/v01.png"></span>
+					</a>
+					<nav class="navbar navbar-static-top">
+						<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+						<span class="all_title">信息化机房动力环境监测与控制系统</span>
+						<div class="navbar-custom-menu">
+							<ul class="nav navbar-nav">
+								<li class="dropdown user user-menu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+										<span class="hidden-xs">管理员</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li class="user-header">
+											<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+											<p>
+												姓名：管理员
+												<small>部门：信息部</small>
+											</p>
+										</li>
+										<li class="user-footer">
+											<div class="pull-right">
+												<a href="login.html" class="btn btn-default btn-flat">退出系统</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+							 
+							</ul>
+						</div>
+					</nav>
+				</header>
+			<aside class="main-sidebar">
+					<section class="sidebar">
+						<div class="user-panel">
+							<div class="pull-left image">
+								<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							</div>
+							<div class="pull-left info">
+								<p>当前用户：管理员</p>
+						<p class="menu_time">
+								时间：<span id="nowTime">2018-11-05 15:43</span></p>
+							</div>
+						</div>
+
+						<ul class="sidebar-menu">
+							<li class="header">菜单 MENU</li>
+							<li class="active">
+								<a href="index1.html">
+									<i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+								</a>
+							</li>
+							 <li class="treeview">
+								<a href="#">
+									<i class="fa fa-sliders"></i>
+									<span>机房管理</span>
+									<span class="pull-right-container">
+										<i class="fa fa-angle-left pull-right"></i>
+									</span>
+								</a>
+								<ul class="treeview-menu">
+									<li><a href="fwqjg.html">&nbsp;&nbsp;&nbsp;&nbsp;服务器机柜</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;监控机柜</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;存储机柜</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;配电柜</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;精密空调</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;UPS</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;消防系统</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+								</ul>
+							</li>
+							<li class="treeview">
+								<a href="#">
+									<i class="fa fa-magnet"></i>
+									<span>指挥室管理</span>
+									<span class="pull-right-container">
+										<i class="fa fa-angle-left pull-right"></i>
+									</span>
+								</a>
+								<ul class="treeview-menu">
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;指挥室空调</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏空调</a></li>
+									<li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="yxjc.html">
+									<i class="fa fa-print" ></i> <span>运行监测</span>
+								</a>
+							</li>
+							<li>
+								<a href="yjgl.html">
+									<i class="fa fa-bell"></i> <span>预警管理</span>
+								</a>
+							</li>
+							<li class="treeview">
+								<a href="#">
+									<i class="fa fa-gears"></i>
+									<span>设备管理</span>
+									<span class="pull-right-container">
+										<i class="fa fa-angle-left pull-right"></i>
+									</span>
+								</a>
+								<ul class="treeview-menu">
+									<li><a href="sbrk.html">&nbsp;&nbsp;&nbsp;&nbsp;设备入库</a></li>
+									<li><a href="sbjx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备检修</a></li>
+									<li><a href="sbbf.html">&nbsp;&nbsp;&nbsp;&nbsp;设备报废</a></li>
+									<li><a href="sbcx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备查询</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="xtjc.html">
+									<i class="fa fa-map"></i> <span>系统集成</span>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</aside>
+
+            <div class="content-wrapper">
+							<section class="content-header">
+								<ol class="breadcrumb">
+									<li>
+										<a href="#"><i class="fa fa-dashboard"></i> 首页</a>
+									</li>
+									<li class="active">配电柜</li>
+								</ol>
+							</section>
+							<div class="content qqq">
+								<div class="jg-left">
+									<div class="jg-bq">
+									<div style="position: absolute;margin-left: 5px;"><img src="vince/images/jg1.png" />	</div>
+									<div class="shebbqone" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" checked="checked" name="shebbq" value="1">&nbsp;数据库服务器</span>
+									</div>
+									<div class="shebbqtwo" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="2">&nbsp;网页服务器</span>
+									</div>
+									<div class="shebbqthree" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="3">&nbsp;视频平台服务器</span>
+									</div>
+									<div class="shebbqfour" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="4">&nbsp;拼接控制服务器</span>
+									</div>
+									<div class="shebbqfive" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="5">&nbsp;网络串口服务器</span>
+									</div>
+									</div>
+								</div>
+								<div class="jg-right" style="position: relative;" >
+										<ul class="nav nav-tabs navs-3">
+											<li class="">
+												<a data-toggle="tab" href="javascript:return false;">
+													<i class="fa fa-gear"></i> 配电运行状态
+												</a>
+											</li>
+											<li class="active">
+												<a data-toggle="tab" href="#tab-1">
+													A项
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab-2">
+													B项
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab-3">
+													C项
+												</a>
+											</li>						
+										</ul>
+										<div class="tab-content" >
+											<div id="tab-1" class="tab-pane active ">														
+													<div style="width: 300px;height: 300px;">
+																	<div id="main" style="width: 300px;height: 300px;"></div>
+															</div>
+															<div style="width: 300px;height: 300px;">
+																	<div id="main1" style="width: 300px;height: 300px;"></div>
+															</div>
+													
+											</div>								
+											<div id="tab-2" class="tab-pane" >
+												<div style="height: 320px;width: 100%;line-height: 320px;">
+													<div style="float: left;width: 50%;min-width: 320px;left: 25%;margin-left: -150px;position: absolute;">
+														<div id="mainbv" style="width: 300px;height: 300px;"></div>
+													</div>
+													<div style="float: left;width: 50%;min-width: 320px;left: 70%;margin-left: -150px;position: absolute;">
+														<div id="mainba" style="width: 300px;height: 300px;"></div>
+													</div>
+												</div>
+												<p style="margin-top: -50px;" class="all_title" >B项电压/电流</p>
+												<div style="height: 395px;width: 100%;position: relative;">
+													<div style="left: 50%;margin-left: -450px;position: absolute;">
+													<div id="mainbw" style="width: 900px;height: 420px;"></div>
+													</div>
+												</div>
+												<p style="margin-top: -10px;" class="all_title" >8小时电压/电流变化</p>
+											</div>
+											<div id="tab-3" class="tab-pane">
+											<div style="height: 350px;width: 100%;background: white;"></div>
+											<p class="all_title">C项电压/电流</p>
+											<div style="height: 365px;width: 100%;background: white;"></div>
+											</div>
+										</div>
+								</div>
+							</div>
+
+            </div>
+			<footer class="main-footer">
+    <div class="pull-right hidden-xs"><b></b></div>
+    <strong><a href="https://www.cnblogs.com/wrxblog/">wrx</a> &copy; 2018</strong>
+  </footer>
+		</div>
+		<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="dist/js/app.min.js"></script>
+		<script src="dist/js/demo.js"></script>
+		<script src="vince/js/nicescroll.js"></script>
+		<script src="vince/js/demo.js"></script>
+		<script src="vince/datapick/js/moment.js"></script>
+		<script src="vince/datapick/js/daterangepicker.js"></script>
+		<script src="vince/js/echarts.min.js"></script>
+	</body>
+<script type="text/javascript">
+	setInterval(function () {
+        $.ajax({
+            url: "/mrs/",
+            type: 'POST',
+            data: {},
+            success: function (data) {
+                wd = JSON.parse(data);
+                // 基于准备好的dom，初始化echarts实例
+
+                var myChart;
+                myChart = echarts.init(document.getElementById('main'));
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}V"
+                    },
+                    series: [
+                        {
+                            name: '电压',
+                            type: 'gauge',
+                            min: 200,
+                            max: 240,
+                            detail: {formatter: '{value}V', textStyle: {fontWeight: '20px'}},
+                            data: [{value: wd.av, name: 'A项电压'}]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+
+                var myChart1 = echarts.init(document.getElementById('main1'));
+                var option1 = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}A"
+                    },
+                    series: [
+                        {
+                            name: '电流',
+                            type: 'gauge',
+                            min: 0,
+                            max: 20,
+                            startAngle: 225,
+                            endAngle: -45,
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.2, 'lightgreen'], [0.4, 'orange'], [0.8, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }},
+                                detail: {formatter: '{value}A', textStyle: {fontWeight: '20px'}},
+                                data: [{value: wd.aa, name: 'A项电流'}]
+                            }
+                    ]
+                };
+                myChart1.setOption(option1);
+
+            }
+            });
+    }, 1000);
+ 
+                var myChartbv;
+                myChartbv = echarts.init(document.getElementById('mainbv'));
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}V"
+                    },
+                    series: [
+                        {
+                            name: '电压',
+                            type: 'gauge',
+                            min: 200,
+                            max: 240,
+                            detail: {formatter: '{value}V', textStyle: {fontWeight: '20px'}},
+                            data: [{value: 220, name: ''}]
+                        }
+                    ]
+                };
+                myChartbv.setOption(option);
+
+                var myChartba = echarts.init(document.getElementById('mainba'));
+                var option1 = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}A"
+                    },
+                    series: [
+                        {
+                            name: '电流',
+                            type: 'gauge',
+                            min: 0,
+                            max: 20,
+                            startAngle: 225,
+                            endAngle: -45,
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.2, 'lightgreen'], [0.4, 'orange'], [0.8, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }},
+                                detail: {formatter: '{value}A', textStyle: {fontWeight: '20px'}},
+                                data: [{value: 20, name: 'A项电流'}]
+                            }
+                    ]
+                };
+                myChartba.setOption(option1);
+								
+								var myChartbw = echarts.init(document.getElementById('mainbw'));
+								var optionw = {
+											title : {
+													text: '',
+													subtext:'',
+											},
+											tooltip : {
+													trigger: 'axis'
+											},
+											legend: {
+													data:['电压','电流'],
+													textStyle: {
+															color: '#fff'          // 图例文字颜色
+													}		
+											},
+											toolbox: {
+													show : true,
+													x:'50',
+													backgroundColor: 'rgba(0,0,0,0)',//背景色
+													feature : {
+															mark : {show: true},
+															dataView : {show: true, readOnly: false},
+															magicType : {show: true, type: ['line', 'bar']},
+															restore : {show: true},
+															saveAsImage : {show: true}
+													}
+											},
+											calculable : true,
+											xAxis : [
+													{
+															type : 'category',
+															boundaryGap :false,
+															data : ['8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00'],	
+															axisLabel: {textStyle: {color: '#fff'}}
+													}
+											],
+											yAxis : [
+													{
+															type : 'value',
+															min:210,
+															max:245,
+															axisLabel : {
+																	formatter: '{value} V',
+																	textStyle: {color: '#fff'},
+															}
+													},
+													{
+															type : 'value',
+															min:0,
+															max:35,
+															axisLabel : {
+																	formatter: '{value} A',
+																	textStyle: {color: '#fff'},
+															}
+													},
+											],
+											series : [
+													{
+															name:'电压',
+															type:'line',
+															// yAxisIndex: 2,
+															data:[220, 215, 222, 223, 235, 238, 215,220],		
+// 															markPoint : {
+// 																	data : [
+// 																			{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+// 																	]
+// 															},														
+													},
+													{
+															name:'电流',
+															type:'line',
+															yAxisIndex: 1,
+															data:[11, 11, 15, 13, 12, 13, 10,20],
+														},
+											],
+									};
+								myChartbw.setOption(optionw);
+</script>
+</html>

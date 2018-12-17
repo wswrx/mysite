@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>配电柜</title>
+{% endblock %}
+{% block info %}
+<section class="content-header">
+								<ol class="breadcrumb">
+									<li>
+										<a href="#"><i class="fa fa-dashboard"></i> 首页</a>
+									</li>
+									<li class="active">配电柜</li>
+								</ol>
+							</section>
+<div class="content qqq">
+								<div class="jg-left">
+									<div class="jg-bq">
+									<div style="position: absolute;margin-left: 5px;"><img src="/static/vince/images/jg1.png" />	</div>
+									<div class="shebbqone" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" checked="checked" name="shebbq" value="1">&nbsp;数据库服务器</span>
+									</div>
+									<div class="shebbqtwo" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="2">&nbsp;网页服务器</span>
+									</div>
+									<div class="shebbqthree" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="3">&nbsp;视频平台服务器</span>
+									</div>
+									<div class="shebbqfour" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="4">&nbsp;拼接控制服务器</span>
+									</div>
+									<div class="shebbqfive" style="line-height: 70px;padding-left: 50px;">
+										<span><input type="radio" name="shebbq" value="5">&nbsp;网络串口服务器</span>
+									</div>
+									</div>
+								</div>
+								<div class="jg-right" style="position: relative;" >
+										<ul class="nav nav-tabs navs-3">
+											<li class="">
+												<a data-toggle="tab" href="javascript:return false;">
+													<i class="fa fa-gear"></i> 配电运行状态
+												</a>
+											</li>
+											<li class="active">
+												<a data-toggle="tab" href="#tab-1">
+													A项
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab-2">
+													B项
+												</a>
+											</li>
+											<li>
+												<a data-toggle="tab" href="#tab-3">
+													C项
+												</a>
+											</li>
+										</ul>
+										<div class="tab-content" >
+											<div id="tab-1" class="tab-pane active ">
+													<div style="width: 300px;height: 300px;">
+																	<div id="main" style="width: 300px;height: 300px;"></div>
+															</div>
+															<div style="width: 300px;height: 300px;">
+																	<div id="main1" style="width: 300px;height: 300px;"></div>
+															</div>
+
+											</div>
+											<div id="tab-2" class="tab-pane" >
+												<div style="height: 320px;width: 100%;line-height: 320px;">
+													<div style="float: left;width: 50%;min-width: 320px;left: 25%;margin-left: -150px;position: absolute;">
+														<div id="mainbv" style="width: 300px;height: 300px;"></div>
+													</div>
+													<div style="float: left;width: 50%;min-width: 320px;left: 70%;margin-left: -150px;position: absolute;">
+														<div id="mainba" style="width: 300px;height: 300px;"></div>
+													</div>
+												</div>
+												<p style="margin-top: -50px;" class="all_title" >B项电压/电流</p>
+												<div style="height: 395px;width: 100%;position: relative;">
+													<div style="left: 50%;margin-left: -450px;position: absolute;">
+													<div id="mainbw" style="width: 900px;height: 420px;"></div>
+													</div>
+												</div>
+												<p style="margin-top: -10px;" class="all_title" >8小时电压/电流变化</p>
+											</div>
+											<div id="tab-3" class="tab-pane">
+											<div style="height: 350px;width: 100%;background: white;"></div>
+											<p class="all_title">C项电压/电流</p>
+											<div style="height: 365px;width: 100%;background: white;"></div>
+											</div>
+										</div>
+								</div>
+							</div>
+    <script>
+       var myChartbv;
+                myChartbv = echarts.init(document.getElementById('mainbv'));
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}V"
+                    },
+                    series: [
+                        {
+                            name: '电压',
+                            type: 'gauge',
+                            min: 200,
+                            max: 240,
+                            detail: {formatter: '{value}V', textStyle: {fontWeight: '20px'}},
+                            data: [{value: 220, name: ''}]
+                        }
+                    ]
+                };
+                myChartbv.setOption(option);
+
+                var myChartba = echarts.init(document.getElementById('mainba'));
+                var option1 = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}A"
+                    },
+                    series: [
+                        {
+                            name: '电流',
+                            type: 'gauge',
+                            min: 0,
+                            max: 20,
+                            startAngle: 225,
+                            endAngle: -45,
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.2, 'lightgreen'], [0.4, 'orange'], [0.8, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }},
+                                detail: {formatter: '{value}A', textStyle: {fontWeight: '20px'}},
+                                data: [{value: 20, name: 'A项电流'}]
+                            }
+                    ]
+                };
+                myChartba.setOption(option1);
+
+								var myChartbw = echarts.init(document.getElementById('mainbw'));
+								var optionw = {
+											title : {
+													text: '',
+													subtext:'',
+											},
+											tooltip : {
+													trigger: 'axis'
+											},
+											legend: {
+													data:['电压','电流'],
+													textStyle: {
+															color: '#fff'          // 图例文字颜色
+													}
+											},
+											toolbox: {
+													show : true,
+													x:'50',
+													backgroundColor: 'rgba(0,0,0,0)',//背景色
+													feature : {
+															mark : {show: true},
+															dataView : {show: true, readOnly: false},
+															magicType : {show: true, type: ['line', 'bar']},
+															restore : {show: true},
+															saveAsImage : {show: true}
+													}
+											},
+											calculable : true,
+											xAxis : [
+													{
+															type : 'category',
+															boundaryGap :false,
+															data : ['8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00'],
+															axisLabel: {textStyle: {color: '#fff'}}
+													}
+											],
+											yAxis : [
+													{
+															type : 'value',
+															min:210,
+															max:245,
+															axisLabel : {
+																	formatter: '{value} V',
+																	textStyle: {color: '#fff'},
+															}
+													},
+													{
+															type : 'value',
+															min:0,
+															max:35,
+															axisLabel : {
+																	formatter: '{value} A',
+																	textStyle: {color: '#fff'},
+															}
+													},
+											],
+											series : [
+													{
+															name:'电压',
+															type:'line',
+															// yAxisIndex: 2,
+															data:[220, 215, 222, 223, 235, 238, 215,220],
+// 															markPoint : {
+// 																	data : [
+// 																			{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+// 																	]
+// 															},
+													},
+													{
+															name:'电流',
+															type:'line',
+															yAxisIndex: 1,
+															data:[11, 11, 15, 13, 12, 13, 10,20],
+														},
+											],
+									};
+								myChartbw.setOption(optionw);
+								</script>
+{% endblock %}
+{% block custom_js %}
+    <script src="/static/vince/js/echarts.js"></script>
+{% endblock %}

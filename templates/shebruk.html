@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>设备入库</title>
+{% endblock %}
+{% block menu %}
+     <li class="header">菜单 MENU</li>
+        <li class="">
+          <a href="/index/">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-sliders"></i>
+            <span>机房管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="fwqjg.html">&nbsp;&nbsp;&nbsp;&nbsp;服务器机柜</a></li>
+            <li><a href="jkjg.html">&nbsp;&nbsp;&nbsp;&nbsp;监控机柜</a></li>
+            <li><a href="ccjg.html">&nbsp;&nbsp;&nbsp;&nbsp;存储机柜</a></li>
+            <li><a href="/pdjg/">&nbsp;&nbsp;&nbsp;&nbsp;配电柜</a></li>
+            <li><a href="/jmkt/">&nbsp;&nbsp;&nbsp;&nbsp;精密空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;UPS</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;消防系统</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>指挥室管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;指挥室空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="yxjc.html">
+            <i class="fa fa-print" ></i> <span>运行监测</span>
+          </a>
+        </li>
+        <li>
+          <a href="yjgl.html">
+            <i class="fa fa-bell"></i> <span>预警管理</span>
+          </a>
+        </li>
+        <li class="treeview active">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>设备管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="/shebruk/">&nbsp;&nbsp;&nbsp;&nbsp;设备入库</a></li>
+            <li><a href="sbjx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备检修</a></li>
+            <li><a href="sbbf.html">&nbsp;&nbsp;&nbsp;&nbsp;设备报废</a></li>
+            <li><a href="sbcx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备查询</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="xtjc.html">
+            <i class="fa fa-map"></i> <span>系统集成</span>
+          </a>
+        </li>
+{% endblock %}
+{% block info %}
+<section class="content-header">
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+        <li class="active">设备入库</li>
+      </ol>
+    </section>
+    <div class="content qqq">
+        ﻿<div class="ssjc_right_bottom">
+                <div class="nei">
+                    <p>设备列表</p>
+                <div class="ssjc_rub_table">
+<table class="tj_table" border="0">
+  <thead>
+    <tr>
+      <td>设备编号</td>
+      <td>设备名称</td>
+      <td>设备安装位置</td>
+      <td>设备IP</td>
+      <td>所属系统</td>
+      <td>验收日期</td>
+      <td>质保日期</td>
+      <td>设备图片</td>
+    </tr>
+  </thead>
+    <tbody>
+    {% for sb in sheb %}
+        <tr>
+            <td>{{ sb.id }}</td>
+            <td>{{ sb.shebmc }}</td>
+            <td>{{ sb.anzhwz }}</td>
+            <td>{{ sb.shebIP }}</td>
+            <td>{{ sb.get_shebxt_display }}</td>
+            <td>{{ sb.yssj }}</td>
+            <td>{{ sb.zbsj }}</td>
+            <td> <img src="/{{ sb.shebtp }}"></td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+ <div class="t_fanye">
+    <a href="/shebruk/?p=1"><span class="upten"></span></a>
+    <a href="/shebruk/?p={{ page.2.0 }}"><span class="up"></span>
+    <span class="split"></span>
+    <span class="page_info_one">第 {{ page.0.0 }} / {{ page.1.0 }} 页</span>
+    <span class="split"></span>
+    <a href="/shebruk/?p={{ page.3.0 }}"><span class="dowm"></span></a>
+    <a href="/shebruk/?p={{ page.1.0 }}"><span class="downten"></span></a>
+    <span class="page_info_two">页记录数 {{ page.1.0 }}</span>
+    <span class="page_info_three">当前{{ page.4.0 }}-{{ page.5.0 }}条记录，共{{ page.6.0 }}条记录</span>
+    <div class="clear"></div>
+ </div>
+                    <div>{{ page }}</div>
+<div class="cheng_ershi"></div>
+</div></div></div>﻿
+
+{% endblock %}

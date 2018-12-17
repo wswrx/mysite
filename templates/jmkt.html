@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>精密空调</title>
+{% endblock %}
+{% block info %}
+<section class="content-header">
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+        <li class="active">精密空调管理</li>
+      </ol>
+    </section>
+    <div class="content qqq">
+		<div style="min-height: 350px;border-bottom: 5px solid #000;background: #21242e">
+			<div style="float: left;width: 30%;text-align: center;line-height: 350px;"><img src="/static/vince/images/jmkt.png" /></div>
+			<div style="float: left;width: 70%;text-align: center;">
+			<div><p class="all_title" style="text-align:left;" >空调开关机状态：</p>
+			<span id="jmktzt" class="kgbxuan"></span>
+			</div>
+			<div>
+				<p class="all_title" style="text-align: left;">空调运行模式：</p>
+				<div class="jmktms">
+					<img id="img1" src="/static/vince/images/ktg.png" class="jmktg" usemap="#Ktms">
+					<map name="Ktms">
+						<area shape="rect" id="jmkts" coords="0,0,140,120" />
+						<area shape="rect" id="jmktr" coords="140,0,280,120" />
+						<area shape="rect" id="jmktl" coords="280,0,420,120" />
+						<area shape="rect" id="jmktq" coords="420,0,560,120" />
+					</map>
+					<img id="img2"  src="/static/vince/images/kts.png" class="jmktmss">
+					<img id="img3" src="/static/vince/images/ktr.png" class="jmktmsr">
+					<img id="img4"  src="/static/vince/images/ktl.png" class="jmktmsl">
+					<img id="img5"  src="/static/vince/images/ktq.png" class="jmktmsq">
+				</div>
+				</div>
+			</div>
+		</div>
+    <div style="min-height: 200px; background: blanchedalmond;border-bottom: 5px solid #000;background: #21242e" >
+				<div style="float: left;width: 33%;text-align: center;">
+					<span style="padding:0 5px;color: #fff;display: block;float: left;line-height: 200px;">回风温度：</span>
+					<div style="transform: rotate(270deg);margin-top: 120px;"><meter value="0.6">60%</meter></div>
+				</div>
+				<div style="float: left;width: 34%;text-align: center;">
+					<span style="padding:0 5px;color: #fff;display: block;float: left;line-height: 200px;">出风温度：</span>
+					<div style="transform: rotate(270deg);margin-top: 120px;"><meter value="0.8">80%</meter></div>
+					</div>
+				<div style="float: left;width: 33%;text-align: center;">
+					<span style="padding:0 5px;color: #fff;display: block;float: left;line-height: 200px;">机房温度：</span>
+					<div style="transform: rotate(270deg);margin-top: 120px;"><meter value="0.3">30%</meter></div>
+					<div class="clear"></div>
+			</div>
+		</div>
+    <div style="min-height: 235px; background: blanchedalmond;border-bottom: 5px solid #000;background: #21242e" >
+			<div>
+			<p class="all_title" style="text-align:center;" >精密空调相电压：</p>
+			<div style="position: relative;">
+				<div class="jmktpa"><span>220V</span></div>
+				<div class="jmktpb"><span>225V</span></div>
+				<div class="jmktpc"><span>230V</span></div>
+			</div>
+			</div>
+			<br><br><br>
+			<div>
+			<p class="all_title" style="text-align:center;" >精密空调相电流：</p>
+			<div style="position: relative;">
+				<div class="jmktpa"><span>10A</span></div>
+				<div class="jmktpb"><span>8A</span></div>
+				<div class="jmktpc"><span>9A</span></div>
+			</div>
+			</div>
+		</div>
+
+		<div style="min-height: 80px;line-height: 80px; background: blanchedalmond;border-bottom: 5px solid #000;background: #21242e;text-align:center;" >
+			<span class="all_title" >精密空调总功率：</span><div class="jmkt-pw" ><span>1600W</span></div>
+		</div>
+    </div>
+{% endblock %}

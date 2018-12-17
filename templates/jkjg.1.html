@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=10">
+		<title>监控机柜</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="dist/css/ionicons.min.css">
+		<link rel="stylesheet" href="dist/css/AdminLTE.css">
+		<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+		<link rel="stylesheet" href="vince/css/vince.css">
+		<link rel="stylesheet" href="vince/biao/css/font-awesome.min.css">
+		<!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.min.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+	</head>
+
+	<body class="hold-transition skin-blue sidebar-mini">
+		<div class="wrapper">	
+<header class="main-header">
+    <a href="#" class="logo">
+      <span class="logo-mini">
+	  <img src="vince/images/v01.png">
+	  </span>
+      <span class="logo-lg"><img src="vince/images/v01.png"></span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+      <span class="all_title">信息化机房动力环境监测与控制系统</span>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">管理员</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <p>
+                  姓名：管理员
+                  <small>部门：信息部</small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="login.html" class="btn btn-default btn-flat">退出系统</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+<aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>当前用户：管理员</p>
+		  <p class="menu_time">
+          时间：<span id="nowTime">2018-11-05 15:43</span></p>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="header">菜单 MENU</li>
+        <li class="active">
+          <a href="index1.html">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-sliders"></i>
+            <span>机房管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="fwqjg.html">&nbsp;&nbsp;&nbsp;&nbsp;服务器机柜</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;监控机柜</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;存储机柜</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;配电柜</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;精密空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;UPS</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;消防系统</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>指挥室管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;指挥室空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="yxjc.html">
+            <i class="fa fa-print" ></i> <span>运行监测</span>
+          </a>
+        </li>
+        <li>
+          <a href="yjgl.html">
+            <i class="fa fa-bell"></i> <span>预警管理</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>设备管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="sbrk.html">&nbsp;&nbsp;&nbsp;&nbsp;设备入库</a></li>
+            <li><a href="sbjx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备检修</a></li>
+            <li><a href="sbbf.html">&nbsp;&nbsp;&nbsp;&nbsp;设备报废</a></li>
+            <li><a href="sbcx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备查询</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="xtjc.html">
+            <i class="fa fa-map"></i> <span>系统集成</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+<div class="content-wrapper">
+				<section class="content-header">
+					<ol class="breadcrumb">
+						<li>
+							<a href="#"><i class="fa fa-dashboard"></i>首页</a>
+						</li>
+						<li class="active">服务器机柜</li>
+					</ol>
+				</section>
+	<div class="content qqq">
+	<div class="jg-left">
+		<div style="position: absolute;margin-left: 30px;"><img src="vince/images/jg4.png" />	</div>
+		<div class="shebbqone" style="line-height: 70px;padding-left: 50px;">
+			<span><input type="radio" checked="checked" name="shebbq" value="1">&nbsp;数据库服务器</span>
+		</div>
+		<div class="shebbqtwo" style="line-height: 70px;padding-left: 50px;">
+			<span><input type="radio" name="shebbq" value="2">&nbsp;网页服务器</span>
+		</div>
+		<div class="shebbqthree" style="line-height: 70px;padding-left: 50px;">
+			<span><input type="radio" name="shebbq" value="3">&nbsp;视频平台服务器</span>
+		</div>
+		<div class="shebbqfour" style="line-height: 70px;padding-left: 50px;">
+			<span><input type="radio" name="shebbq" value="4">&nbsp;拼接控制服务器</span>
+		</div>
+		<div class="shebbqfive" style="line-height: 70px;padding-left: 50px;">
+			<span><input type="radio" name="shebbq" value="5">&nbsp;网络串口服务器</span>
+		</div>
+	</div>
+	<div class="jg-right">
+		<ul class="nav nav-tabs navs-3">
+			<li class="">
+				<a data-toggle="tab" href="javascript:return false;">
+					<i class="fa fa-gear"></i> 设备运行状态
+				</a>
+			</li>
+			<li class="active">
+				<a data-toggle="tab" href="#tab-1">
+					CPU
+				</a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab-2">
+					磁盘
+				</a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab-3">
+					内存
+				</a>
+			</li>
+			<li>
+				<a data-toggle="tab" href="#tab-4">
+					网络
+				</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div id="tab-1" class="tab-pane active ">
+				<div style="text-align: center;margin-top:50px">
+					<div><img src="vince/images/cpu.png"></div>
+					<div class="tab-font">
+					<br>
+					<br>
+					<p class='cpu'></p>
+					<p class='cpu_ip'></p>
+					<br>
+					<p>CPU运行状态：<span  class="shoudanxuan"></span></p>
+					<br>
+					<p>主板温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43℃</p>
+					<p>风扇温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33℃</p>
+					<p>显卡温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53℃</p>
+					<p>风扇转速&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1400转/分</p>
+					</div>
+				</div>
+			</div>			
+			<div id="tab-2" class="tab-pane">
+				<div style="text-align: center;margin-top:50px">
+					<div><img src="vince/images/yp.png"></div>
+					<div class="tab-font">
+					<br>
+					<br>
+					<p class='cpu'></p>
+					<p class='cpu_ip'></p>
+					<br>
+					<p>硬盘运行状态：<span  class="shoudanxuan"></span></p>
+					<br>
+					<p>主板温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43℃</p>
+					<p>风扇温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33℃</p>
+					<p>显卡温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53℃</p>
+					<p>风扇转速&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1400转/分</p>
+					</div>
+				</div>
+			</div>
+			<div id="tab-3" class="tab-pane">
+				<div style="text-align: center;margin-top:50px">
+					<div><img src="vince/images/nc.png"></div>
+					<div class="tab-font">
+					<br>
+					<br>
+					<p class='cpu'></p>
+					<p class='cpu_ip'></p>
+					<br>
+					<p>内存运行状态：<span  class="shoudanxuan"></span></p>
+					<br>
+					<p>主板温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43℃</p>
+					<p>风扇温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33℃</p>
+					<p>显卡温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53℃</p>
+					<p>风扇转速&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1400转/分</p>
+					</div>
+				</div>
+			</div>
+			<div id="tab-4" class="tab-pane">
+				<div style="text-align: center;margin-top:50px">
+					<div><img src="vince/images/wl.png"></div>
+					<div class="tab-font">
+					<br>
+					<br>
+					<p class='cpu'></p>
+					<p class='cpu_ip'></p>
+					<br>
+					<p>网络运行状态：<span  class="shoudanxuan"></span></p>
+					<br>
+					<p>主板温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43℃</p>
+					<p>风扇温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33℃</p>
+					<p>显卡温度&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53℃</p>
+					<p>风扇转速&nbsp;&nbsp;&nbsp;&nbsp;<span  class="shoudanxuan"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1400转/分</p>
+					</div>
+				</div>
+						</div>
+		</div>
+	</div>
+	</div>
+	</div>						
+		<footer class="main-footer">
+    <div class="pull-right hidden-xs"><b></b></div>
+    <strong><a href="https://www.cnblogs.com/wrxblog/">wrx</a> &copy; 2018</strong>
+  </footer>
+		<div class="control-sidebar-bg"></div>
+		</div>
+		<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="dist/js/app.min.js"></script>
+		<script src="dist/js/demo.js"></script>
+		<script src="vince/js/nicescroll.js"></script>
+		<script src="vince/js/demo.js"></script>
+		<script src="vince/datapick/js/moment.js"></script>
+		<script src="vince/datapick/js/daterangepicker.js"></script>
+		<script src="vince/js/echarts.min.js"></script>
+	</body>
+<script>
+	$(".cpu").text('数据库服务器')
+	$('.cpu_ip').text('192.168.1.20')
+</script>
+</html>

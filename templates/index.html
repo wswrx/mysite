@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>首页</title>
+{% endblock %}
+{% block menu %}
+     <li class="header">菜单 MENU</li>
+        <li class="active">
+          <a href="/index/">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-sliders"></i>
+            <span>机房管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="fwqjg.html">&nbsp;&nbsp;&nbsp;&nbsp;服务器机柜</a></li>
+            <li><a href="jkjg.html">&nbsp;&nbsp;&nbsp;&nbsp;监控机柜</a></li>
+            <li><a href="ccjg.html">&nbsp;&nbsp;&nbsp;&nbsp;存储机柜</a></li>
+            <li><a href="/pdjg/">&nbsp;&nbsp;&nbsp;&nbsp;配电柜</a></li>
+            <li><a href="/jmkt/">&nbsp;&nbsp;&nbsp;&nbsp;精密空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;UPS</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;消防系统</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>指挥室管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;指挥室空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;显示屏空调</a></li>
+            <li><a href="xyxgpj.html">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="yxjc.html">
+            <i class="fa fa-print" ></i> <span>运行监测</span>
+          </a>
+        </li>
+        <li>
+          <a href="yjgl.html">
+            <i class="fa fa-bell"></i> <span>预警管理</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>设备管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/shebruk/">&nbsp;&nbsp;&nbsp;&nbsp;设备入库</a></li>
+            <li><a href="sbjx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备检修</a></li>
+            <li><a href="sbbf.html">&nbsp;&nbsp;&nbsp;&nbsp;设备报废</a></li>
+            <li><a href="sbcx.html">&nbsp;&nbsp;&nbsp;&nbsp;设备查询</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="xtjc.html">
+            <i class="fa fa-map"></i> <span>系统集成</span>
+          </a>
+        </li>
+{% endblock %}
+{% block info %}
+    <div class="fuceng">
+  <div class="fuqu" id="box">
+    <div class="fuquzone">
+      <div class="fuqulogo" id="bar1">
+
+      </div>
+      <p class="fuqutitle" id="bar">
+        <span class="fuclose">×</span>
+      </p>
+
+<div class="sy_newtable">
+  <div class="sy_newtabletitle">
+    <div class="sy_newtabletitlelf">
+    <p>实时能耗</p>
+  </div>
+  <div class="sy_newtabletitleri">
+    <p>实时电压</p>
+  </div>
+  </div>
+  <div class="sy_newtablecon">
+    <div class="sy_newtableconle">
+     30KW
+  </div>
+  <div class="sy_newtableconri">
+    <li>
+      <span class="le">A项</span>
+      <span class="ri">{{ peid.aV }}V</span>
+    </li>
+     <li>
+      <span class="le">B项</span>
+      <span class="ri">{{ peid.bV }}V</span>
+    </li>
+     <li>
+      <span class="le">C项</span>
+      <span class="ri">{{ peid.cV }}V</span>
+    </li>
+  </div></div></div>
+ </div></div></div>
+<section class="content-header">
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+      </ol>
+    </section>
+<div class="content qqq">
+    <div class="rezone">
+          <div class="requtu">
+<img src='/static/vince/images/jifang4.jpg'  usemap="#Map" />
+<map name="Map">
+<area shape="poly"  id="hotone"  coords="487,85,563,60,660,41,721,35,753,35,772,40,785,45,778,190,748,197,729,213,727,230,727,264,680,276,665,273,640,269,624,269,598,273,580,273,564,274,556,274,542,280,524,280,508,278,492,278,485,263" href="#">
+<area shape="poly" id="hottwo" coords="185,156,213,177,223,175,236,188,238,200,307,211,308,196,330,189,424,156,422,110,400,91,315,72,311,51,257,40,244,32,212,26,168,32,155,45,156,115,159,135" href="#">
+<area shape="rect" id="hotthree" coords="380,200,480,300">
+</map>
+<a href="yjgl.html">
+<div class="sy_jinggao jing"></div></a>
+<div class="requone">
+<div class="requzuo"></div>
+<div class="requyou">
+<p class="requyou_title">控制室</p>
+<li class="requyou_inf">
+	<span class="requyou_infleft">控制室温度</span>
+	<span class="requyou_infright">26℃</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">显示屏运行温度</span>
+	<span class="requyou_infright">32℃</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">显示屏实时能耗</span>
+	<span class="requyou_infright">5kWh</span>
+</li></div></div>
+<div class="requtwo">
+<div class="requzuo"></div>
+<div class="requyou">
+<p class="requyou_title">机房</p>
+<li class="requyou_inf">
+	<span class="requyou_infleft">机房温度</span>
+	<span class="requyou_infright">35℃</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">本日累计耗电量</span>
+	<span class="requyou_infright">90kWh</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">本月累计耗电量</span>
+	<span class="requyou_infright">210kWh</span>
+</li>
+</div></div></div> </div>
+<div class="requthree">
+<div class="requzuo"></div>
+<div class="requyou">
+<p class="requyou_title">机柜</p>
+<li class="requyou_inf">
+	<span class="requyou_infleft">服务器机柜温度</span>
+	<span class="requyou_infright">30℃</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">监控机柜温度</span>
+	<span class="requyou_infright">32℃</span>
+</li>
+<li class="requyou_inf">
+	<span class="requyou_infleft">存储机柜温度</span>
+	<span class="requyou_infright">30℃</span>
+</li></div></div>
+<div class="sy_info">
+<div class="sy_info_left lindianjia">
+   <p>实时能耗：<span >  30</span> KW <br>
+平均电压：<span >225</span> V</p>
+</div>
+<div class="sy_info_right">
+  <div class="sy_info_one">
+  <p>
+      当<br>前<br>运<br>行<br>状<br>态
+  </p>
+  </div>
+ <div class="sy_info_three">
+   <table>
+     <tr>
+       <td>指挥室</td>
+       <td>指挥室空调运行状态<span  class="shoudanxuan"></span></td>
+       <td>显示屏空调运行状态<span  class="shoudanxuan"></span></td>
+       <td id="dap_wd">显示屏运行温度：{{ wendu.dapywd }}℃</td>
+       <td>UPS使用情况<span  class="shoudanxuan"></span></td>
+     </tr>
+      <tr>
+       <td>机房</td>
+       <td>精密空调运行状态<span  class="shoudanxuan"></span></td>
+       <td id="fwq_wd">服务器机柜温度：{{ wendu.fwqjgwd }}℃</td>
+       <td id="jk_wd">监控机柜温度：{{ wendu.jkjgwd }}℃</td>
+       <td id="cc_wd">存储机柜温度：{{ wendu.ccjgwd }}℃</td>
+     </tr>
+   </table>
+<div class="clear"></div>
+</div>
+<div class="sy_info_four">
+  <p><br>机房及控制室漏水监测状态<span  class="shoudanxuan"></span><br><br>消防系统运行状态<span  class="shoudanxuan"></span></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<script>
+    (function(){
+}());
+ setInterval(function () {
+        $.ajax({
+            url: "/index/",
+            type: 'POST',
+            headers:{'X-CSRFtoken':$.cookie('csrftoken')},
+            success: function (data) {
+                wd = JSON.parse(data);
+                $("#dap_wd").html('显示屏运行温度:'+wd.dapwd+'℃');
+                $("#fwq_wd").html('服务器机柜温度:'+wd.fwqjgwd+'℃');
+                $("#jk_wd").html('监控机柜温度:'+wd.jkjgwd+'℃');
+                $("#cc_wd").html('存储机柜温度:'+wd.ccjgwd+'℃');
+
+            }
+        })
+    }, 5000);
+</script>
+{% endblock %}
+

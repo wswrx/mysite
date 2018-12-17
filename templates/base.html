@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+    {% block head %}{% endblock %}
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="/static/dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="/static/dist/css/skins/_all-skins.css">
+  <link rel="stylesheet" type="text/css" href="/static/vince/css/vince2.css">
+  <link rel="stylesheet" href="/static/vince/biao/css/font-awesome.min.css">
+
+  <!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.min.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+    {% block custom_js %}{% endblock %}
+    {% block custom_css %}{% endblock %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+      <header class="main-header">
+    <a href="#" class="logo">
+      <span class="logo-mini">
+	  <img src="/static/vince/images/v01.png">
+	  </span>
+      <span class="logo-lg"><img src="/static/vince/images/v01.png"></span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+      <span class="all_title">信息化机房动力环境监测与控制系统</span>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src='{{ request.session.toux }}' class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ request.session.username }}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src='{{ request.session.toux }}' class="img-circle" alt="User Image">
+                <p>
+                  姓名：{{ request.session.username }}
+                  <small>部门：{{ request.session.bum }}</small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="/logout/" class="btn btn-default btn-flat">退出系统</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src='{{ request.session.toux }}' class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>当前用户：{{ request.session.username }}</p>
+		  <p class="menu_time">
+          时间：<span id="nowTime">2018-11-05 15:43</span></p>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+          {% block menu %}{% endblock %}
+      </ul>
+    </section>
+  </aside>
+
+    <div class="content-wrapper">
+      {% block info %}{% endblock %}
+  </div>
+  	<footer class="main-footer">
+    <div class="pull-right hidden-xs"><b></b></div>
+    <strong><a href="https://www.cnblogs.com/wrxblog/">wrx</a> &copy; 2018</strong>
+  </footer>
+  <div class="control-sidebar-bg"></div>
+</div>
+<script src="/static/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/dist/js/app.min.js"></script>
+<script src="/static/vince/js/nicescroll.js"></script>
+<script src="/static/vince/drag/zxx.drag.1.0.js"></script>
+<script src="/static/dist/js/demo.js"></script>
+<script  src="/static/vince/js/demo2.js"></script>
+<script src="/static/vince/js/echarts.min.js"></script>
+<script src="/static/vince/js/jquery.cookie.js"></script>
+</body>
+</html>
