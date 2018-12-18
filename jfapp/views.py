@@ -87,3 +87,7 @@ def shebruk(request):
         return render(request,'shebruk.html',{'sheb':data,'page':pagetest})
     else:
         return redirect('/login/')
+
+def yjgl(request):
+    if request.session.get('is_login', None):
+        return render(request,'yjgl.html')

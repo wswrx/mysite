@@ -25,4 +25,5 @@ urlpatterns = [
     path('logout/', views.logout),
     path('jmkt/',views.jmkt),
     path('shebruk/',views.shebruk),
+    path('yjgl/',views.yjgl)
 ]
