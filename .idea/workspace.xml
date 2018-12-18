@@ -228,7 +228,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -283,7 +283,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545029852279</updated>
-      <workItem from="1545097691961" duration="2092000" />
+      <workItem from="1545097691961" duration="2321000" />
     </task>
     <task id="LOCAL-00001" summary="更新报警管理系统">
       <created>1545099251862</created>
@@ -296,7 +296,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2092000" />
+    <option name="totallyTimeSpent" value="2321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="23" width="1424" height="769" extended-state="0" />
@@ -306,7 +306,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28134558" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28134558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,7 +315,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32874617" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32874617" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
