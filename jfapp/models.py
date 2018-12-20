@@ -15,7 +15,7 @@ class User(models.Model):
     )
     bum = models.IntegerField(verbose_name='用户部门',choices=bm_choice,default=0)
     shouj = models.IntegerField(verbose_name='手机号码')
-    toux = models.ImageField(verbose_name='用户头像',upload_to = "static/dist/img/")
+    toux = models.ImageField(verbose_name='用户头像',upload_to = "upload/img/")
     shij = models.DateTimeField(verbose_name='注册时间',auto_now=True)
 
     class Meta:
@@ -40,7 +40,7 @@ class Shebdj(models.Model):
     shebxt = models.IntegerField(verbose_name='子系统', choices=xt_choice, default=0)
     yssj = models.DateField(verbose_name='验收时间')
     zbsj = models.DateField(verbose_name='质保到期时间')
-    shebtp = models.ImageField(verbose_name='设备图片',upload_to = "static/dist/img/")
+    shebtp = models.ImageField(verbose_name='设备图片',upload_to = "upload/img/")
 
     class Meta:
         verbose_name = '设备管理'

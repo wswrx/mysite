@@ -488,11 +488,11 @@ option{background: #21242e;}
 .tree{overflow:hidden;}
  
 /*新建样式*/
-.shebbqone{position: absolute;height: 70px;width: 175px;left: 300px;top: 75px;background: url(../images/icon_68.png)no-repeat;display: block;}
-.shebbqtwo{position: absolute;height: 70px;width: 175px;left: 300px;top: 150px;background: url(../images/icon_68.png)no-repeat;display: block;}
-.shebbqthree{position: absolute;height: 70px;width: 175px;left: 300px;top: 300px;background: url(../images/icon_68.png)no-repeat;display: block;}
-.shebbqfour{position: absolute;height: 70px;width: 175px;left: 300px;top: 500px;background: url(../images/icon_68.png)no-repeat;display: block;}
-.shebbqfive{position: absolute;height: 70px;width: 175px;left: 300px;top: 680px;background: url(../images/icon_68.png)no-repeat;display: block;}
+.shebbqone{position: absolute;height: 70px;width: 175px;right: 10px;top: 75px;background: url(../images/icon_68.png)no-repeat;display: block;}
+.shebbqtwo{position: absolute;height: 70px;width: 175px;right: 10px;top: 150px;background: url(../images/icon_68.png)no-repeat;display: block;}
+.shebbqthree{position: absolute;height: 70px;width: 175px;right: 10px;top: 300px;background: url(../images/icon_68.png)no-repeat;display: block;}
+.shebbqfour{position: absolute;height: 70px;width: 175px;right: 10px;top: 500px;background: url(../images/icon_68.png)no-repeat;display: block;}
+.shebbqfive{position: absolute;height: 70px;width: 175px;right: 10px;top: 680px;background: url(../images/icon_68.png)no-repeat;display: block;}
 .kgxuan{display: inline-block;height: 116px;width: 256px;background:url(../images/kg1.png);background-size:100% 100%;position: relative;top: 3px;left: 5px;}
 .kgxuanwei{display: inline-block;height: 116px;width: 256px;background:url(../images/kg2.png);background-size:100% 100%;position: relative;top: 3px;left: 5px;}
 .kgbxuan{display: inline-block;height: 91px;width: 218px;background:url(../images/kg21.png);background-size:100% 100%;position: relative;top: 3px;left: 5px;}
@@ -511,9 +511,10 @@ option{background: #21242e;}
 
 
 /* 机柜样式 */
-.jg-left{padding-left: 10px; border-right: 10px solid #000;text-align:center;float: left;min-height: 820px;width: 40%;min-width: 480px;background: #21242e;line-height: 820px;}
-.jg-right{padding-left: 10px; border-right: 10px solid #000;text-align: center;float:left;min-height:820px;width: 60%;min-width: 720px;background: #21242e;}
-.jg-bq{position: relative;height: 800px;width:470px;left: 50%;margin-left: -235px;}
+.jg-left{padding-left: 10px; border-right: 10px solid #000;text-align:center;float: left;min-height: 820px;width: 40%;min-width: 360px;background: #21242e;line-height: 820px;position: relative}
+.jg-right{padding-left: 10px; border-right: 10px solid #000;text-align: center;float:left;min-height:820px;width: 60%;min-width: 540px;background: #21242e;}
+/*.jg-bq{position: relative;height: 800px;width:100%;}*/
 
 /*精密空调样式*/
 .jmkts{min-height: 350px;border-bottom: 5px solid #000;background: #21242e}
+

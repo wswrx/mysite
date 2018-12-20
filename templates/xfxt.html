@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>消防系统</title>
+{% endblock %}
+{% block menu %}
+     <li class="header">菜单 MENU</li>
+        <li class="">
+          <a href="/index/">
+            <i class="fa fa-home" style="font-size: 22px"></i> <span>首页</span>
+          </a>
+        </li>
+         <li class="treeview active">
+          <a href="#">
+            <i class="fa fa-sliders"></i>
+            <span>机房管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/fwqjg/">&nbsp;&nbsp;&nbsp;&nbsp;服务器机柜</a></li>
+            <li><a href="/jkjg/">&nbsp;&nbsp;&nbsp;&nbsp;监控机柜</a></li>
+            <li><a href="/ccjg/">&nbsp;&nbsp;&nbsp;&nbsp;存储机柜</a></li>
+            <li><a href="/pdjg/">&nbsp;&nbsp;&nbsp;&nbsp;配电柜</a></li>
+            <li><a href="/jmkt/">&nbsp;&nbsp;&nbsp;&nbsp;精密空调</a></li>
+            <li><a href="/ups/">&nbsp;&nbsp;&nbsp;&nbsp;UPS</a></li>
+            <li class="active"><a href="/xfxt/">&nbsp;&nbsp;&nbsp;&nbsp;消防系统</a></li>
+            <li><a href="/lsjc/">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-magnet"></i>
+            <span>指挥室管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/xsp/">&nbsp;&nbsp;&nbsp;&nbsp;显示屏</a></li>
+            <li><a href="/zhskt/">&nbsp;&nbsp;&nbsp;&nbsp;指挥室空调</a></li>
+            <li><a href="/xspkt/">&nbsp;&nbsp;&nbsp;&nbsp;显示屏空调</a></li>
+            <li><a href="/zhslsjc/">&nbsp;&nbsp;&nbsp;&nbsp;漏水监测</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/yxjc/">
+            <i class="fa fa-print" ></i> <span>运行监测</span>
+          </a>
+        </li>
+        <li>
+          <a href="/yjgl/">
+            <i class="fa fa-bell"></i> <span>预警管理</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>设备管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="/shebruk/">&nbsp;&nbsp;&nbsp;&nbsp;设备入库</a></li>
+            <li><a href="/sbjx/">&nbsp;&nbsp;&nbsp;&nbsp;设备检修</a></li>
+            <li ><a href="/sbbf/">&nbsp;&nbsp;&nbsp;&nbsp;设备报废</a></li>
+            <li ><a href="/sbcx/">&nbsp;&nbsp;&nbsp;&nbsp;设备查询</a></li>
+          </ul>
+        </li>
+        <li >
+          <a href="/xtjc/">
+            <i class="fa fa-map"></i> <span>系统集成</span>
+          </a>
+        </li>
+{% endblock %}
+{% block info %}
+<section class="content-header">
+      <ol class="breadcrumb">
+        <li><a href="/index/"><i class="fa fa-dashboard"></i> 首页</a></li>
+        <li class="active">消防系统</li>
+      </ol>
+</section>
+<div class="content qqq">
+<h1 style="color: white">消防系统界面</h1>
+</div>
+{% endblock %}

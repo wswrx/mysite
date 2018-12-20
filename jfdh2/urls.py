@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,re_path
 from jfapp import views
+from django.views.static import serve
+from jfdh2.settings import MEDIA_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,21 @@ urlpatterns = [
     path('logout/', views.logout),
     path('jmkt/',views.jmkt),
     path('shebruk/',views.shebruk),
-    path('yjgl/',views.yjgl)
+    path('yjgl/',views.yjgl),
+    path('ccjg/',views.ccjg),
+    path('fwqjg/',views.fwqjg),
+    path('jkjg/',views.jkjg),
+    path('lsjc/',views.lsjc),
+    path('sbbf/',views.sbbf),
+    path('sbcx/',views.sbcx),
+    path('sbjx/',views.sbjx),
+    path('ups/',views.ups),
+    path('xfxt/',views.xfxt),
+    path('xsp/',views.xsp),
+    path('xspkt/',views.xspkt),
+    path('xtjc/',views.xtjc),
+    path('yxjc/',views.yxjc),
+    path('zhskt/',views.zhskt),
+    path('zhslsjc/',views.zhslsjc),
+    re_path(r'^media/(?P<path>.*)$',  serve, {"document_root": MEDIA_ROOT}),
 ]
