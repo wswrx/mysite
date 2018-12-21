@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e069ee7a-1d9a-49ea-93a0-394ef9e40927" name="Default" comment="V1.2">
-      <change afterPath="$PROJECT_DIR$/media/movie/gzns.mp4" afterDir="false" />
+    <list default="true" id="e069ee7a-1d9a-49ea-93a0-394ef9e40927" name="Default" comment="V1.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jfapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pdjg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pdjg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/xsp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/xsp.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
@@ -211,7 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +223,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,6 +311,7 @@
       <workItem from="1545370309612" duration="3346000" />
       <workItem from="1545378454145" duration="1279000" />
       <workItem from="1545380010664" duration="35000" />
+      <workItem from="1545381872393" duration="1093000" />
     </task>
     <task id="LOCAL-00001" summary="更新报警管理系统">
       <created>1545099251862</created>
@@ -351,11 +348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545321971041</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="V1.3">
+      <created>1545381889382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545381889383</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40883000" />
+    <option name="totallyTimeSpent" value="41976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,9 +371,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1874106" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -383,7 +387,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5028612" side_tool="true" weight="0.32853025" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49713877" weight="0.32853025" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.49713877" visible="true" weight="0.32853025" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32853025" />
       <window_info anchor="bottom" id="manage.py@mysite" order="13" weight="0.32867134" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -440,7 +444,8 @@
     <MESSAGE value="更新报警管理系统" />
     <MESSAGE value="V1.1" />
     <MESSAGE value="V1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.2" />
+    <MESSAGE value="V1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
