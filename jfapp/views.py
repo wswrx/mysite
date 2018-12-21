@@ -55,7 +55,31 @@ def logout(request):
 
 def pdjg(request):
     if request.session.get('is_login', None):
-        return render(request, 'pdjg.html')
+        if request.method == 'GET':
+            return render(request, 'pdjg.html')
+        if request.method == 'POST':
+            tb = request.POST.get('tb')
+            av = []
+            wv = []
+            wa = []
+            if tb == '1':
+                av = [220,20]
+                wv = [220, 215, 222, 223, 235, 238, 215,220]
+                wa = [12,13,14,15,16,17,18,19]
+            elif tb == '2':
+                av = [230,12]
+                wv = [245, 240, 235, 230, 225, 220, 215, 210]
+                wa = [12, 13, 14, 15, 16, 17, 18, 19]
+            else:
+                av = [205,6]
+                wv = [210, 215, 220, 225, 230, 235, 240, 245]
+                wa = [12, 13, 14, 15, 16, 17, 18, 19]
+            data = {
+                'av': av,
+                'wv': wv,
+                'wa': wa,
+            }
+            return HttpResponse(json.dumps(data))
     else:
         return redirect('/login/')
 
@@ -133,7 +157,13 @@ def xfxt(request):
 
 def xsp(request):
     if request.session.get('is_login', None):
-        return render(request,'xsp.html')
+        mv = request.GET.get('p', 1)
+        mvpath = ''
+        if mv == '1':
+            mvpath = '/media/movie/kcj.mp4'
+        if mv == '2':
+            mvpath = '/media/movie/gzns.mp4'
+        return render(request,'xsp.html',{'mvp':mvpath})
 
 def xspkt(request):
     if request.session.get('is_login', None):

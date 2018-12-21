@@ -137,16 +137,16 @@
 											<div id="tab-1" class="tab-pane active ">
 													<div style="height: 320px;width: 100%;line-height: 320px;">
 													<div style="float: left;width: 50%;min-width: 320px;left: 25%;margin-left: -150px;position: absolute;">
-														<div id="mainbv" style="width: 300px;height: 300px;"></div>
+														<div id="mainav" style="width: 300px;height: 300px;"></div>
 													</div>
 													<div style="float: left;width: 50%;min-width: 320px;left: 70%;margin-left: -150px;position: absolute;">
-														<div id="mainba" style="width: 300px;height: 300px;"></div>
+														<div id="mainaa" style="width: 300px;height: 300px;"></div>
 													</div>
 												</div>
 												<p style="margin-top: -50px;" class="all_title" >A项电压/电流</p>
 												<div style="height: 395px;width: 100%;position: relative;">
 													<div style="left: 50%;margin-left: -350px;position: absolute;">
-													<div id="mainbw" style="width:700px;height: 420px;"></div>
+													<div id="mainaw" style="width:700px;height: 420px;"></div>
 													</div>
 												</div>
 												<p style="margin-top: -10px;" class="all_title" >8小时电压/电流变化</p>
@@ -171,10 +171,10 @@
 											<div id="tab-3" class="tab-pane">
 											<div style="height: 320px;width: 100%;line-height: 320px;">
 													<div style="float: left;width: 50%;min-width: 320px;left: 25%;margin-left: -150px;position: absolute;">
-														<div id="mainbv" style="width: 300px;height: 300px;"></div>
+														<div id="maincv" style="width: 300px;height: 300px;"></div>
 													</div>
 													<div style="float: left;width: 50%;min-width: 320px;left: 70%;margin-left: -150px;position: absolute;">
-														<div id="mainba" style="width: 300px;height: 300px;"></div>
+														<div id="mainca" style="width: 300px;height: 300px;"></div>
 													</div>
 												</div>
 												<p style="margin-top: -50px;" class="all_title" >C项电压/电流</p>
@@ -189,26 +189,59 @@
 								</div>
 							</div>
     <script>
-       var myChartbv = echarts.init(document.getElementById('mainbv'));
-                // 指定图表的配置项和数据
-            var option = {
-                tooltip: {
-                    formatter: "{a} <br/>{b} : {c}V"
-                },
-                series: [
-                    {
-                        name: '电压',
-                        type: 'gauge',
-                        min: 200,
-                        max: 240,
-                        detail: {formatter: '{value}V', textStyle: {fontWeight: '20px'}},
-                        data: [{value: 220, name: ''}]
+    var t1 = 'mainav';
+    var t2 = 'mainaa';
+    var t3 = 'mainaw';
+    var tb = 1;
+    setInterval(function () {
+        if($('#tab-2').hasClass('active')){
+            t1 = 'mainbv';
+            t2 = 'mainba';
+            t3 = 'mainbw';
+            tb = 2;
+        }else if($('#tab-3').hasClass('active')){
+            t1 = 'maincv';
+            t2 = 'mainca';
+            t3 = 'maincw';
+            tb = 3;
+        }else {
+            t1 = 'mainav';
+            t2 = 'mainaa';
+            t3 = 'mainaw';
+            tb = 1;
+        }
+            $.ajax({
+                url: "/pdjg/",
+                type: 'POST',
+                data:{'tb':tb},
+                headers: {'X-CSRFtoken': $.cookie('csrftoken')},
+                success: function (data) {
+                    dt = JSON.parse(data);
+                    var myChartbv;
+                    if (myChartbv != null && myChartbv != "" && myChartbv != undefined) {
+                        myChartbv.dispose();
                     }
-                ]
-            };
-       myChartbv.setOption(option);
+                    myChartbv = echarts.init(document.getElementById(t1));
+                // 指定图表的配置项和数据
+                    var option = {
+                        tooltip: {
+                            formatter: "{a} <br/>{b} : {c}V"
+                        },
+                        textStyle:{color:'#fff'},
+                        series: [
+                            {
+                            name: '电压',
+                            type: 'gauge',
+                            min: 200,
+                            max: 240,
+                            detail: {formatter: '{value}V', textStyle: {fontWeight: '20px'}},
+                            data: [{value: dt.av[0], name: 'A项电压'}]
+                        }
+                    ]
+                };
+                    myChartbv.setOption(option);
 
-       var myChartba = echarts.init(document.getElementById('mainba'));
+       var myChartba = echarts.init(document.getElementById(t2));
             var option1 = {
                 tooltip: {
                     formatter: "{a} <br/>{b} : {c}A"
@@ -228,13 +261,13 @@
                                 width: 30
                             }},
                             detail: {formatter: '{value}A', textStyle: {fontWeight: '20px'}},
-                            data: [{value: 20, name: 'A项电流'}]
+                            data: [{value: dt.av[1], name: 'A项电流'}]
                         }
                 ]
             };
        myChartba.setOption(option1);
 
-       var myChartbw = echarts.init(document.getElementById('mainbw'));
+       var myChartbw = echarts.init(document.getElementById(t3));
             var optionw = {
                         title : {
                                 text: '',
@@ -314,7 +347,7 @@
                                 {
                                         name:'电压',
                                         type:'line',
-                                        data:[220, 215, 222, 223, 235, 238, 215,220],
+                                        data:dt.wv,
                                         symbol: 'circle',
                                         symbolSize: 10,
                                 },
@@ -324,13 +357,17 @@
                                         yAxisIndex: 1,
                                         symbol: 'circle',
                                         symbolSize: 10,
-                                        data:[11, 11, 15, 13, 12, 13, 10,20],
+                                        data:dt.wa,
                                     },
                         ],
                 };
        myChartbw.setOption(optionw);
+                }
+            })
+        }, 5000);
     </script>
 {% endblock %}
 {% block custom_js %}
     <script src="/static/vince/js/echarts.js"></script>
+    <script src="/static/vince/js/jquery.js"></script>
 {% endblock %}
